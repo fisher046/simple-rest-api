@@ -12,7 +12,7 @@ const (
 func Response(w http.ResponseWriter, r *http.Request) {
 	if r.Header.Get(locationKey) == "" {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte("cannot know it come from"))
+		w.Write([]byte("cannot know where it comes from"))
 		return
 	}
 
